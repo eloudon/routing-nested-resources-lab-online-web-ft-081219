@@ -26,7 +26,7 @@ end
 end
 
   def new
-    @song = Song.new
+    params.require(:song).permit(:title, :artist_name)
   end
 
   def create
